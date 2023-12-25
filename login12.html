@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("https://akcdn.detik.net.id/visual/2021/04/21/galfot-pantai-di-jepara-3_169.jpeg?w=400&q=90");
+
+    }
+    .container {
+      width: 300px;
+      margin: 100px auto;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    form {
+            background-color: #fff;
+            padding: 35px 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+          }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <form id="loginForm">
+    <h2>Login Form</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="button" onclick="validateLogin()">Login</button>
+  </form>
+</div>
+
+<script src="otentikasi.js"></script>
+
+</body>
+</html>

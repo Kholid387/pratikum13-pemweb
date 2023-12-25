@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat massege javasciprt</title>
+</head>
+<body>
+    <fieldset style="height: 450px; width:  400px;margin: 0 auto;">
+        <legend>Chat message - Online</legend>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chat-container {
+    max-width: 400px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+#chat-box {
+    height: 200px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: 70%;
+    padding: 8px;
+}
+
+button {
+    padding: 8px;
+}
+
+    </style>
+    <div class="chat-container">
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+    // Mendapatkan nilai dari input pengguna
+    var message = document.getElementById('user-input').value;
+
+    if (message.trim() !== '') {
+        // Membuat elemen paragraf untuk menampilkan pesan
+        var messageElement = document.createElement('p');
+        messageElement.textContent = message;
+
+        // Menambahkan pesan ke dalam kotak obrolan
+        document.getElementById('chat-box').appendChild(messageElement);
+
+        // Mengosongkan input setelah mengirim pesan
+        document.getElementById('user-input').value = '';
+
+        // Menggulir kotak obrolan ke bawah untuk melihat pesan terbaru
+        document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+    }
+}
+
+    </script>
+</body>
+</html>
